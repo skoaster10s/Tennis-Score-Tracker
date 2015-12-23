@@ -20,3 +20,4 @@ user-friendly and interactive window.
 The ScoreTrackerTesterORI (non-GUI) version is bug-free.
 The ScoretrackerTesterGUI (GUI) version has some minor bugs that is being fixed, but is fully functional
 for most score cases.
+Tested with BlueJ IDE.
