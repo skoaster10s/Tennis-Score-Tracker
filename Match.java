@@ -84,7 +84,7 @@ public class Match
     }
 
     /**
-    * @return True if the match is done, False if the match is not done
+    * @return True if the match is done, false if the match is not done
     */
     public boolean isMatchDone()
     {

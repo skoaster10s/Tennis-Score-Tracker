@@ -82,7 +82,7 @@ public class GameScore
     }
     
     /**
-    * @return True if the game is at deuce, False if the game is not at deuce
+    * @return True if the game is at deuce, false if the game is not at deuce
     */
     public boolean atDeuce()
     {
@@ -98,7 +98,7 @@ public class GameScore
     }
     
     /**
-    * @return True if the game is done, False if the game is not done
+    * @return True if the game is done, false if the game is not done
     */
     public boolean isItDone()
     {
