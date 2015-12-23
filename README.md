@@ -17,7 +17,7 @@ user-friendly and interactive window.
 ------------------------------------------------
 
 # NOTES
-The ScoreTrackerTesterORI (non-GUI) version is bug-free.
-The ScoretrackerTesterGUI (GUI) version has some minor bugs that is being fixed, but is fully functional
+* The ScoreTrackerTesterORI (non-GUI) version is bug-free.
+* The ScoretrackerTesterGUI (GUI) version has some minor bugs that is being fixed, but is fully functional
 for most score cases.
-Tested with BlueJ IDE.
+* Tested with BlueJ IDE.
