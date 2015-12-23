@@ -5,10 +5,14 @@ import java.awt.event.*;
 import javax.swing.*;
 
 /**
- * Write a description of class ScoreTrackerTester here.
+ * ScoreTrackerTesterGUI class implements a GUI applet that 
+ * asks for the users input for the two player names and
+ * number of sets being played and then displays a text
+ * representation of the score of the whole match. When the
+ * match is done, it will display the result of the match.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sean Ko 
+ * @version November 1, 2015
  */
 public class ScoreTrackerTesterGUI extends JFrame
 {

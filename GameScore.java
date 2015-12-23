@@ -1,15 +1,20 @@
 
 /**
- * This class represents 1 game in tennis.
+ * This class represents one game in tennis.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sean Ko
  */
 public class GameScore
 {
     private int pt1, pt2;
     private boolean isDone, atDeuce;
 
+    /**
+    * Constructor for a Game Score
+    * Initializes the score of the game to "Love all" (0-0), 
+    * false as the boolean of whether the game is done, 
+    * and false as the boolean of whether the game is at deuce.
+    */
     public GameScore()
     {
         pt1 = 0;
@@ -18,6 +23,9 @@ public class GameScore
         atDeuce = false;
     }
 
+    /**
+    * Increments the game score if player 1 wins the point
+    */
     public void win1() 
     {
         if(!atDeuce)
@@ -44,6 +52,9 @@ public class GameScore
         isItDone();
     }
     
+    /**
+    * Increments the game score if player 2 wins the point
+    */
     public void win2()
     {
         if(!atDeuce)
@@ -70,6 +81,9 @@ public class GameScore
         isItDone();
     }
     
+    /**
+    * @return True if the game is at deuce, False if the game is not at deuce
+    */
     public boolean atDeuce()
     {
         if( pt1 == 40 && pt2 == 40)
@@ -83,6 +97,9 @@ public class GameScore
         return atDeuce;
     }
     
+    /**
+    * @return True if the game is done, False if the game is not done
+    */
     public boolean isItDone()
     {
         if (pt1 == 100 || pt2 == 100)
@@ -92,6 +109,9 @@ public class GameScore
         return isDone;
     }
     
+    /**
+    * @return 1 if player 1 won the game, 2 if player 2 won the game
+    */
     public int whoWon()
     {
         int i = 0;
@@ -103,6 +123,9 @@ public class GameScore
         return i;
     }
     
+    /**
+    * Resets the game score back to "Love all" (0-0)
+    */
     public void reset()
     {
         pt1 = 0;
@@ -110,6 +133,10 @@ public class GameScore
         isDone = false;
     }
     
+    /**
+    * @return Text representation of the game score
+    * @see ScoreTrackerTesterGUI
+    */
     public String toString()
     {
         String txt = "  Game   ||  ";
@@ -132,11 +159,17 @@ public class GameScore
         return txt;
     }
     
+    /**
+    * @return Points for player 1 in the current game
+    */
     public int getPt1()
     {
         return pt1;
     }
     
+    /**
+    * @return Points for player 2 in the current game
+    */
     public int getPt2()
     {
         return pt2;

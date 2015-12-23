@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 /**
- * Write a description of class Match here.
+ * Match class represents one match played between two players
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sean Ko
  */
 public class Match
 {
@@ -12,6 +11,15 @@ public class Match
     private GameScore game;
     private int currentSetNum;
 
+    /**
+    * Constructor for a Match.
+    * Initializes a match played between two players with the given names, 
+    * number of sets being played, 
+    * and one as the current set being played.
+    * @param String Name of player 1
+    * @param String Name of player 2
+    * @param int Number of sets the match is out of
+    */
     public Match(String name1, String name2, int numOfSets)
     {
         p1 = new Player(name1);
@@ -25,6 +33,9 @@ public class Match
         currentSetNum = 1;
     }
     
+    /**
+    * Increments the points of Player 1
+    */
     public void winPt1()
     {
         if(!sets.get(currentSetNum-1).toTB())
@@ -47,6 +58,9 @@ public class Match
         }
     }
     
+    /**
+    * Increments the points of Player 2
+    */
     public void winPt2()
     {
         if(!sets.get(currentSetNum-1).toTB())
@@ -69,6 +83,9 @@ public class Match
         }
     }
 
+    /**
+    * @return True if the match is done, False if the match is not done
+    */
     public boolean isMatchDone()
     {
         if(sets.size()%2 == 1)
@@ -84,6 +101,10 @@ public class Match
         return false;
     }
     
+    /**
+    * @return Text representation of the match score
+    * @see ScoreTrackerTesterORI
+    */
     public String toString()
     {
         String border = "----------------------------------------------";
@@ -97,6 +118,10 @@ public class Match
         return border + "\n" + line1 + "\n" + line2 + "\n" + line3 + "\n" + border;
     }
     
+    /**
+    * @return Text representation of the final score
+    * @see ScoreTrackerTesterORI
+    */
     public String finalScore()
     {
         String txt = "Winner: ";
@@ -140,26 +165,45 @@ public class Match
         
     }
     
+    /**
+    * @return ArrayList of current SetScore
+    * @see SetScore
+    */
     public ArrayList getSetScores()
     {
         return sets;
     }
     
+    /**
+    * @return current GameScore
+    * @see GameScore
+    */
     public GameScore getGameScore()
     {
         return game;
     }
     
+    /**
+    * @return Player 1
+    * @see Player
+    */
     public Player getPlayer1()
     {
         return p1;
     }
     
+    /**
+    * @return Player 2
+    * @see Player
+    */
     public Player getPlayer2()
     {
         return p2;
     }
     
+    /**
+    * @return Current set number being played
+    */
     public int getCurrentSetNum()
     {
         return currentSetNum;

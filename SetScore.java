@@ -1,4 +1,9 @@
 
+/**
+* SetScore class represents the score of one set
+*
+* @author Sean Ko
+*/
 public class SetScore
 {
     private int games1, games2;
@@ -7,7 +12,13 @@ public class SetScore
     private int setNumber;
 
     /**
-     * Constructor for objects of class SetScore
+     * Constructor for a SetScore
+     * Initializes the score of the set to 0-0,
+     * false as the boolean of whether the set is done,
+     * false as the boolean of whether the set is going to a tiebreak (at 6-6),
+     * a new tiebreak,
+     * and the set number.
+     * @param int Set number
      */
     public SetScore(int num)
     {
@@ -19,21 +30,33 @@ public class SetScore
         setNumber = num;
     }
     
+    /**
+    * @return Number of games player 1 won in the current set
+    */
     public int getGames1()
     {
         return games1;
     }
     
+    /**
+    * @return Number of games player 2 won in the current set
+    */
     public int getGames2()
     {
         return games2;
     }
     
+    /**
+    * @return Tiebreak
+    */
     public Tiebreak getTB()
     {
         return tiebreak;
     }
     
+    /**
+    * Increments the set score if player 1 wins the game
+    */
     public void win1()
     {
         if(!toTB())
@@ -49,6 +72,9 @@ public class SetScore
         isItDone();
     }
     
+    /**
+    * Increments the set score if player 2 wins the game
+    */
     public void win2()
     {
         if(toTB() == false)
@@ -64,6 +90,9 @@ public class SetScore
         isItDone();
     }
     
+    /**
+    * Resets the score of the set
+    */
     public void reset()
     {
         games1 = 0;
@@ -71,11 +100,17 @@ public class SetScore
         isDone = false;
     }
     
+    /**
+    * Sets the set number
+    */
     public void setSetNumber(int n)
     {
         setNumber = n;
     }
     
+    /**
+    * @return True if the set score is 6-6, false if otherwise
+    */
     public boolean toTB()
     {
         if(games1 == 6 && games2 == 6)
@@ -85,6 +120,9 @@ public class SetScore
         return goToTiebreak;
     }
     
+    /**
+    * @return True if the set is done, false if it is not done
+    */
     public boolean isItDone()
     {
         if( (games1 == 6 && games2 < 5) || (games1 < 5 && games2 == 6) ||
@@ -96,6 +134,10 @@ public class SetScore
         return isDone;
     }
     
+    /**
+    * @return Text representation of the set score
+    * @see ScoreTrackerTesterGUI
+    */
     public String toString()
     {
         String txt =  "   " + setNumber + "     ||  " + games1 + "       -       " + games2;

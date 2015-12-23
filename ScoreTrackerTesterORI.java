@@ -1,9 +1,13 @@
 import java.util.Scanner;
 /**
- * Write a description of class ScoreTrackerTester here.
+ * ScoreTrackerTester class implements an application that
+ * asks for the users input for the two player names and
+ * number of sets being played and then displays a text
+ * representation of the score of the whole match. When the
+ * match is done, it will display the result of the match.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sean Ko 
+ * @version June 1, 2014
  */
 public class ScoreTrackerTesterORI
 {
